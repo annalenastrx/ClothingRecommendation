@@ -1,0 +1,679 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my wardrobe",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "WeatherTestIntent",
+          "slots": [
+            {
+              "name": "cityslot",
+              "type": "AMAZON.City"
+            },
+            {
+              "name": "timeslot",
+              "type": "timeslot"
+            }
+          ],
+          "samples": [
+            "what can i wear {timeslot}",
+            "choose my outfit for {cityslot} {timeslot}",
+            "what can i wear in {cityslot}",
+            "what can i wear {timeslot} in {cityslot}",
+            "what can i wear {timeslot}  {cityslot}",
+            "tell me what to wear to {cityslot}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "OccasionRecIntent",
+          "slots": [
+            {
+              "name": "occasion",
+              "type": "occasion"
+            },
+            {
+              "name": "timeslot",
+              "type": "timeslot"
+            },
+            {
+              "name": "adjective",
+              "type": "adjective"
+            }
+          ],
+          "samples": [
+            "I have a {adjective} {occasion} {timeslot}  ",
+            "choose my outfit for an {occasion}",
+            "choose my outfit for a {occasion}",
+            "What shall i wear for an {occasion}",
+            "What shall i wear for a {occasion}",
+            "I want to look {adjective} at an {occasion}",
+            "Recommend me something for an {occasion}",
+            "I want to look {adjective} at a {occasion}",
+            "I want to look {adjective} for the {occasion} {timeslot}",
+            "What shall i wear for {occasion}",
+            "Recommend me something for a {occasion}",
+            "What can I wear to {occasion}",
+            "I have a {occasion} {timeslot} what should i wear"
+          ]
+        },
+        {
+          "name": "SeasonsIntent",
+          "slots": [
+            {
+              "name": "season",
+              "type": "season"
+            },
+            {
+              "name": "adjective",
+              "type": "adjective"
+            }
+          ],
+          "samples": [
+            "tell me what to wear for this {season} day to look {adjective}",
+            "what would look {adjective} on a {season} day",
+            "tell me what to wear for this {season} day",
+            "what can I wear for {season} days to look {adjective}",
+            "recommend me a {adjective} {season} outfit",
+            "what can I wear for a {season} day",
+            "recommend me a {season} outfit"
+          ]
+        },
+        {
+          "name": "WelcomeIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.DE_FIRST_NAME"
+            }
+          ],
+          "samples": [
+            "I\u0027m {name}",
+            "Hi I am {name}",
+            "I am {name}",
+            "Hi my name is {name}",
+            "My name is {name}"
+          ]
+        },
+        {
+          "name": "NewUserIntent",
+          "slots": [
+            {
+              "name": "color",
+              "type": "AMAZON.Color",
+              "samples": [
+                "I like wearing {color}",
+                "{color} is my favourite color",
+                "My favourite color is {color}",
+                "I like {color}",
+                "{color}"
+              ]
+            },
+            {
+              "name": "clothes",
+              "type": "clothes",
+              "samples": [
+                "I like my {clothes}",
+                "I love wearing my {color} {clothes}",
+                "I love wearing {clothes}",
+                "My {clothes}",
+                "{clothes}"
+              ]
+            },
+            {
+              "name": "hateclothes",
+              "type": "AMAZON.Color",
+              "samples": [
+                "I hate to wear {hateclothes}",
+                "I hate {hateclothes}",
+                "{hateclothes} I really hate them",
+                "I would never wear {hateclothes}",
+                "I really don\u0027t like wearing {hateclothes}",
+                "{hateclothes}"
+              ]
+            },
+            {
+              "name": "hatecolor",
+              "type": "clothes",
+              "samples": [
+                "I don\u0027t like {hatecolor}",
+                "I hate {hatecolor}",
+                "{hatecolor}",
+                "I hate wearing {hatecolor}",
+                "I really don\u0027t like to wear {hatecolor}",
+                "Yes {hatecolor}"
+              ]
+            }
+          ],
+          "samples": [
+            "change my preferences",
+            "Alexa change preferences",
+            "I would like to change my preferences",
+            "change preferences",
+            "I like my {clothes}",
+            "My favourite color is {color}",
+            "I like {color}",
+            "I like {color} {clothes}",
+            "I like {color} and {clothes}",
+            "My favourite color is {color} and I like my {clothes} {hateclothes} {hatecolor}",
+            "My favourite color is {color} and I like my {clothes}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dinner",
+                "synonyms": [
+                  "dinner party"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "birthday party",
+                "synonyms": [
+                  "surprise birthday party"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "wedding",
+                "synonyms": [
+                  "wedding reception"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "date"
+              }
+            },
+            {
+              "name": {
+                "value": "first date"
+              }
+            },
+            {
+              "name": {
+                "value": "party"
+              }
+            },
+            {
+              "name": {
+                "value": "meeting"
+              }
+            },
+            {
+              "name": {
+                "value": "interview",
+                "synonyms": [
+                  "job interview"
+                ]
+              }
+            }
+          ],
+          "name": "occasion"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "today",
+                "synonyms": [
+                  "now"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "this afternoon"
+              }
+            },
+            {
+              "name": {
+                "value": "at lunch",
+                "synonyms": [
+                  "at noon"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "this morning",
+                "synonyms": [
+                  "in the morning"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "tomorrow",
+                "synonyms": [
+                  "next morning",
+                  "tomorrow night"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "tonight"
+              }
+            }
+          ],
+          "name": "timeslot"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "feminine"
+              }
+            },
+            {
+              "name": {
+                "value": "unique",
+                "synonyms": [
+                  "special"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "cropped"
+              }
+            },
+            {
+              "name": {
+                "value": "perfect",
+                "synonyms": [
+                  "pretty"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "nice",
+                "synonyms": [
+                  "flattering",
+                  "cool",
+                  "awesome",
+                  "great"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "small",
+                "synonyms": [
+                  "skinny",
+                  "tiny"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "big",
+                "synonyms": [
+                  "oversized",
+                  "loose"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "crazy"
+              }
+            },
+            {
+              "name": {
+                "value": "classic",
+                "synonyms": [
+                  "normal",
+                  "regular",
+                  "casual",
+                  "neutral",
+                  "average",
+                  "usual"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "light",
+                "synonyms": [
+                  "lightweight",
+                  "thin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "cute",
+                "synonyms": [
+                  "lovely",
+                  "adorable"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "elegant",
+                "synonyms": [
+                  "luxurious"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "important"
+              }
+            },
+            {
+              "name": {
+                "value": "exquisite"
+              }
+            },
+            {
+              "name": {
+                "value": "trendy",
+                "synonyms": [
+                  "fashionable",
+                  "stylish"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "comfy",
+                "synonyms": [
+                  "chilly",
+                  "soft",
+                  "comfortable",
+                  "cozy"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "beautiful",
+                "synonyms": [
+                  "stunning",
+                  "pretty",
+                  "wonderful",
+                  "gorgeous",
+                  "perfect",
+                  "enchanting",
+                  "charming",
+                  "captivating"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "professional"
+              }
+            },
+            {
+              "name": {
+                "value": "spectacular",
+                "synonyms": [
+                  "special"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "stunning",
+                "synonyms": [
+                  "breath taking"
+                ]
+              }
+            }
+          ],
+          "name": "adjective"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "autumn",
+                "synonyms": [
+                  "fall"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "spring"
+              }
+            },
+            {
+              "name": {
+                "value": "summer"
+              }
+            },
+            {
+              "name": {
+                "value": "winter"
+              }
+            }
+          ],
+          "name": "season"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "no",
+                "synonyms": [
+                  "no preference"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "longsleeve"
+              }
+            },
+            {
+              "name": {
+                "value": "blouse",
+                "synonyms": [
+                  "fancy blouse",
+                  "dress shirt"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "dress"
+              }
+            },
+            {
+              "name": {
+                "value": "skirt"
+              }
+            },
+            {
+              "name": {
+                "value": "top",
+                "synonyms": [
+                  "t-shirt",
+                  "shirt"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "pants",
+                "synonyms": [
+                  "jeans",
+                  "slacks",
+                  "trouser",
+                  "trousers"
+                ]
+              }
+            }
+          ],
+          "name": "clothes"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "no"
+              }
+            }
+          ],
+          "name": "AMAZON.Color"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "NewUserIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "color",
+              "type": "AMAZON.Color",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1046681357256.815035209916"
+              }
+            },
+            {
+              "name": "clothes",
+              "type": "clothes",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1046681357256.901385373563"
+              }
+            },
+            {
+              "name": "hateclothes",
+              "type": "AMAZON.Color",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1046681357256.930962752552"
+              }
+            },
+            {
+              "name": "hatecolor",
+              "type": "clothes",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1046681357256.646507697811"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1046681357256.815035209916",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which color is most prominent in your wardrobe?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Which color do you like wearing the most?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Can you tell me your favourite color?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1046681357256.901385373563",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Is der a piece that you love wearing in your wardrobe?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Is there anything you could wear everyday?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What do you love to wear?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Can you tell me again which of your clothes is your favourite?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1046681357256.930962752552",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Any piece of clothing you consider a fashion no-go?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What do you not like to wear at all?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Is there a piece of clothing you really hate wearing?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Are there any clothes that you don\u0027t like?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1046681357256.646507697811",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Is there a color you don\u0027t like?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Do you have any color you don\u0027t like?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Is there a color you hate?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "42"
+}
